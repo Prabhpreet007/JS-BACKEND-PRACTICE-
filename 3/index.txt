@@ -1,0 +1,48 @@
+FIRST LEVEL CODE or TOPLEVEL CODE:-
+the code not inside any block or jo code kisi function ke andar ni hai
+
+sync functions:
+it returns a value
+
+EG:-
+crypto.pbkdf2Sync("password","salt",1000000,100,"sha512")
+console.log("password is hashed")
+
+
+
+
+async functions:
+in this a callback function is called and usme likha hota h jo b aapko krna hota hai
+
+EG:-
+crypto.pbkdf2("password","salt",100000,100,"sha512",()=>{
+    console.log("password is hashed")
+})
+
+-------------------------------------------------------------------------------------------
+
+EVENT LOOP & CALLBACK QUEUE
+
+                            ----------------    
+                            |     TIMER    |     (SetTimeout & SetInterval)
+                        /   |              |     starts from here
+                      /     ----------------         \
+                    /                                  \
+                  /                                      \
+                /                                          \
+              /                                  
+----------------                                               ----------------
+|     CLOSE    |                                               |  POLL        | (I/O OPERATIONS)
+|              |                                               |              | (FS(FILESYSTEM),HTTP,CRYPTO)
+----------------                                               ---------------- (incoming CONNECTIONS)
+(socket.on("close"))               \
+                    \                                            /
+                     \                                         /
+                      \                                      /
+                       \                                   /
+                        \    ----------------            /
+                            |     CHECK    |
+                            |              | (SetImmediate)
+                            ----------------
+
+

@@ -1,0 +1,18 @@
+common js vs ecmascript modules(ESM):
+
+commonjs is widely used because it was introduced very early
+ESM is less used beacuse it is relatively new
+
+but ESM is better than commonjs
+ESM loads the modules asynchronously
+common js loads the modules synchronously
+
+which makes ESM more fast
+ESM is used in frontend library also...
+
+
+
+The code which is async is nature
+it doesnt blocks the main thread is called as non blocking code
+
+the code which blocks the main thread is called as blocking code
