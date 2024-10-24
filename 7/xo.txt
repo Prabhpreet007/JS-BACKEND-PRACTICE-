@@ -1,0 +1,6 @@
+use
+     
+    npx server 
+
+in a directory
+phir same server pe agr aap ho toh same url daal ke you can see and download the whole directory
